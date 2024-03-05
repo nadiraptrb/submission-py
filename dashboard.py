@@ -16,6 +16,13 @@ sns.set(style='dark')
 df_day = pd.read_csv('day.csv')
 df_hour = pd.read_csv('hour.csv')
 
+# Define a dictionary to map numerical values to season names
+season_mapping = {1: 'Spring', 2: 'Summer', 3: 'Fall', 4: 'Winter'}
+
+# Replace numerical values with season names in your DataFrames
+df_day['season'] = df_day['season'].map(season_mapping)
+df_hour['season'] = df_hour['season'].map(season_mapping)
+
 st.header('Dicoding Collection Dashboard')
 
 # Hitung rata-rata penggunaan sepeda berdasarkan musim
