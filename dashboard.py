@@ -23,7 +23,7 @@ season_counts_day = df_day.groupby('season')['cnt'].mean()
 season_counts_hour = df_hour.groupby('season')['cnt'].mean()
 
 # Plot bar chart untuk menampilkan rata-rata penggunaan sepeda berdasarkan musim
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(6, 4))
 sns.barplot(x=season_counts_day.index, y=season_counts_day.values, color='darkblue')
 plt.title('Average Bike Usage by Season (Day)')
 plt.xlabel('Season')
