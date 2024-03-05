@@ -28,13 +28,14 @@ sns.barplot(x=season_counts_day.index, y=season_counts_day.values, color='darkbl
 plt.title('Average Bike Usage by Season (Day)')
 plt.xlabel('Season')
 plt.ylabel('Average Bike Usage (Day)')
-st.pyplot()
+fig_day = plt.gcf()  # Get the current figure
+st.pyplot(fig_day)
 
 plt.figure(figsize=(10, 6))
 sns.barplot(x=season_counts_hour.index, y=season_counts_hour.values, color='darkblue')
 plt.title('Average Bike Usage by Season (Hour)')
 plt.xlabel('Season')
 plt.ylabel('Average Bike Usage (Hour)')
-st.pyplot()
+fig_hour = plt.gcf()  # Get the current figure
+st.pyplot(fig_hour)
 
-# Perform other analysis and visualizations here as needed
